@@ -1,0 +1,119 @@
+/* Estilo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chatbox {
+    height: 400px;
+    padding: 10px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+    scroll-behavior: smooth;
+}
+
+/* Estilo das mensagens */
+.mensagem {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 75%;
+}
+
+.mensagem.usuario {
+    background-color: #d1e7dd;
+    align-self: flex-end; /* Alinha à direita */
+    text-align: right; /* Alinha o texto à direita */
+}
+
+.mensagem.bot {
+    background-color: #f8d7da;
+    align-self: flex-start; /* Alinha à esquerda */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilo das opções */
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.opcoes button {
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.opcoes button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo do campo de data */
+/* Estilo do campo de data */
+.flatpickr {
+    display: none; /* Inicialmente oculto */
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #007bff; /* Borda azul para indicar interatividade */
+    background-color: #e9ecef; /* Cor de fundo suave */
+    color: #333; /* Cor do texto */
+    font-size: 16px; /* Aumentar o tamanho da fonte */
+    transition: border-color 0.3s, background-color 0.3s; /* Transição suave para o foco */
+}
+
+.flatpickr:focus {
+    border-color: #0056b3; /* Muda a cor da borda ao focar */
+    background-color: #ffffff; /* Muda a cor de fundo ao focar */
+    outline: none; /* Remove o contorno padrão do input */
+}
+
+/* Estilo do calendário */
+.flatpickr-calendar {
+    border: 1px solid #007bff;
+}
+
+/* Melhorar a visibilidade dos dias */
+.flatpickr-day {
+    color: #333;
+}
+
+.flatpickr-day.selected {
+    background-color: #007bff !important; /* Cor do botão quando selecionado */
+    color: white !important; /* Texto branco quando selecionado */
+}
+
+.flatpickr-day:hover {
+    background-color: #0056b3 !important; /* Cor do botão ao passar o mouse */
+    color: white !important; /* Texto branco ao passar o mouse */
+}
+
+/* Adicionando transições suaves */
+.flatpickr-calendar, .flatpickr-input {
+    transition: all 0.2s ease-in-out;
+}
+
